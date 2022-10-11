@@ -1,10 +1,17 @@
 fun main() {
+
+    var transfer = 56700
     val commission = 0.75
     val min = 35
-    val transfer = 1_000
 
-    val amount = ((transfer * commission) / 100) + transfer + min
+    val amount = ((transfer * commission) / 100)
 
-    println("The transfer amount: " + amount + " RUB")
+    if (amount < min) {
+        println("The transfer amount with comission: ${transfer + min}" + " RUB")
+    } else {
+        println("The transfer amount with comission: ${transfer + amount}" + " RUB")
+
+    }
+
 }
 
